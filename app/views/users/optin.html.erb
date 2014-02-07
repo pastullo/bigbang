@@ -1,0 +1,6 @@
+
+<p>Hi <%= @user.name %>!</p>
+<p>To join TheBigBang you have to optin!</p>
+
+<%= button_to 'Opt In', change_optin_user_path(current_user, :optin => true) %>
+<%# button_to 'Opt Out', change_optin_path(:optin => false) %>

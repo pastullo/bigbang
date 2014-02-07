@@ -2,14 +2,18 @@ Bigbang::Application.routes.draw do
   devise_for :users
   resources :friendships
 
-  resources :users
+  resources :users do
+    member do
+      post 'change_optin'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'users#index'
-
+get 'optin' => 'users#optin'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

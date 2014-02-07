@@ -61,6 +61,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def optin
+    @user = current_user
+  end
+
+  def change_optin
+    if params[:optin] == 'true'
+      current_user.update_attribute(:optin, true)
+      flash[:notice] = 'You successfully opted it!'
+    end
+  end
+    
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

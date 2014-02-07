@@ -6,6 +6,8 @@
       <th>Name</th>
       <th>Email</th>
       <th>Friends</th>
+      <th>Optin</th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,8 +21,9 @@
         <td><%= user.email %></td>
 
         <td><% user.friends.each do |f| %>
-        <%= f.name.capitalize %> 
+        <%= f.name.capitalize %><br> 
         <% end %></td>
+        <td><%= user.optin.inspect %></td>
         <td>
           <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post if user_signed_in? %>
         </td>
