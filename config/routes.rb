@@ -13,7 +13,7 @@ Bigbang::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'users#index'
-get 'optin' => 'users#optin'
+  get 'optin' => 'users#optin'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
