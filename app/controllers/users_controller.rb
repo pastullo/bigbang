@@ -12,6 +12,9 @@ class UsersController < ApplicationController
   def show
   end
 
+  def friendlist
+    @users = User.where(:optin => true).where("id != ?", current_user.id)
+  end
   # GET /users/new
   def new
     @user = User.new
