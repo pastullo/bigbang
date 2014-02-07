@@ -8,12 +8,16 @@ class ApplicationController < ActionController::Base
 
 
   private
-
+  def check_admin
+    return if current_user.admin?
+    flash[:alert] = 'You do not have rights to access this page'
+    redirect_to root_path
+  end
   def check_optin
   	return unless user_signed_in?
   	return if current_user.optin
-  	return if controller_name == 'users' and (action_name == 'optin' or action_name == 'change_optin')
-  	flash[:notice] = 'you have to optin brew'
+  	return if (controller_name == 'users' and (action_name == 'optin' or action_name == 'change_optin')) or (action_name == 'destroy' and controller_name == 'sessions')
+  	# flash[:notice] = 'You have to optin first'
   	redirect_to optin_path
   end
 end
