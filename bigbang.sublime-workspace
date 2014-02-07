@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"firen",
+				"Friends"
+			],
+			[
 				"zip",
 				"zipCodeList"
 			],
@@ -95,13 +99,73 @@
 	},
 	"buffers":
 	[
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 484,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1280,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/migrate/20140205145802_add_devise_to_users.rb",
+			"settings":
+			{
+				"buffer_size": 1840,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1666,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 583,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/friendships_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1767,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 369.0,
 		"selected_items":
 		[
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"erb	",
+				"Snippet: erb"
+			],
+			[
+				"erb",
+				"Snippet: end (ERB)"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -127,6 +191,30 @@
 	},
 	"file_history":
 	[
+		"/home/flavio/Ruby/bigbang/config/initializers/devise.rb",
+		"/home/flavio/Ruby/bigbang/app/views/users/index.html.erb",
+		"/home/flavio/Ruby/bigbang/app/views/users/show.html.erb",
+		"/home/flavio/Ruby/bigbang/app/assets/stylesheets/application.css.scss",
+		"/home/flavio/Ruby/bigbang/app/models/user.rb",
+		"/home/flavio/Ruby/bigbang/app/models/friendship.rb",
+		"/home/flavio/Ruby/bigbang/app/views/friendships/show.html.erb",
+		"/home/flavio/Ruby/bigbang/config/initializers/wrap_parameters.rb",
+		"/home/flavio/Ruby/bigbang/config/initializers/backtrace_silencers.rb",
+		"/home/flavio/Ruby/bigbang/tmp/cache/assets/development/sass/386a4b0b67d0e352a1c349da2f8f839accb7e85a/_normalize.scssc",
+		"/home/flavio/Ruby/bigbang/app/views/friendships/show.json.jbuilder",
+		"/home/flavio/Ruby/bigbang/db/schema.rb",
+		"/home/flavio/Ruby/bigbang/db/development.sqlite3",
+		"/home/flavio/Ruby/bigbang/config/database.yml",
+		"/home/flavio/Ruby/bigbang/app/helpers/application_helper.rb",
+		"/home/flavio/Ruby/bigbang/app/controllers/application_controller.rb",
+		"/home/flavio/Ruby/bigbang/app/assets/javascripts/application.js",
+		"/home/flavio/Ruby/bigbang/config/application.rb",
+		"/home/flavio/.config/sublime-text-3/Packages/User/erb.sublime-snippet",
+		"/home/flavio/Ruby/bigbang/config/environment.rb",
+		"/home/flavio/Ruby/bigbang/app/views/friendships/index.html.erb",
+		"/home/flavio/Ruby/bigbang/config/initializers/inflections.rb",
+		"/home/flavio/Ruby/bigbang/config/routes.rb",
+		"/home/flavio/Ruby/bigbang/Rakefile",
 		"/home/flavio/Downloads/shippingcosts-postcode-validation.html",
 		"/home/flavio/.bashrc",
 		"/var/www/website/system/helper/json.php",
@@ -230,35 +318,11 @@
 		"/var/www/website/admin/controller/catalog/product_deals.php",
 		"/var/www/website/catalog/view/theme/bootstrap/libs/rs-9.4.93/royalslider/royalslider.css",
 		"/var/www/website/catalog/view/theme/bootstrap/template/venture/furniture/common/home.tpl",
-		"/var/www/website/catalog/view/theme/evolution/template/checkout/mobile/checkout_right_order_total.tpl",
-		"/var/www/website/vendor/symfony/console/Symfony/Component/Console/Tests/Command/HelpCommandTest.php",
-		"/var/www/website/catalog/view/theme/evolution/stylesheet/vendor/royalslider/royalslider.css.less",
-		"/var/www/website/catalog/view/theme/bootstrap/template/venture/baby/common/home.tpl",
-		"/var/www/website/admin/view/javascript/jquery/jstree/demo/static_async_json.html",
-		"/var/www/website/system/library/5rooms/PHPExcel/Calculation/Statistical.php",
-		"/var/www/website/admin/controller/report/sale_tax.php",
-		"/var/www/website/catalog/view/theme/bootstrap/stylesheet/venture/baby-responsive.css",
-		"/var/www/website/node_modules/grunt-contrib-less/test/expected/variablesAsLess.css",
-		"/var/www/website/system/library/5rooms/pear/Spreadsheet/Excel/Writer.php",
-		"/var/www/website/node_modules/grunt-contrib-watch/node_modules/gaze/test/watch_race_test.js",
-		"/var/www/website/system/library/weight.php",
-		"/var/www/website/catalog/view/theme/evolution/template/product/quickview.tpl",
-		"/var/www/website/catalog/view/theme/bootstrap/libs/rs-9.4.93/royalslider/dev/modules/jquery.rs.deeplinking.js",
-		"/var/www/website/admin/view/template/sale/order_mark_out_stock.tpl",
-		"/var/www/website/catalog/model/payment/safeshop/productLineItem.php",
-		"/var/www/website/catalog/view/theme/bootstrap/stylesheet/website/category.less",
-		"/var/www/website/catalog/controller/account/logout.php",
-		"/var/www/website/admin/view/template/catalog/product_list.tpl",
-		"/var/www/website/admin/view/template/localisation/order_product_item_status_form.tpl",
-		"/var/www/website/catalog/view/theme/bootstrap/stylesheet/bootstrap/glyphicons.less",
-		"/var/www/website/catalog/controller/feed/google_sitemap.php",
-		"/var/www/website/catalog/controller/feed/google_base.php",
-		"/var/www/website/catalog/view/theme/evolution/template/config_template/footer_catagory.tpl",
-		"/var/www/website/admin/controller/extension/catalog_function.php"
+		"/var/www/website/catalog/view/theme/evolution/template/checkout/mobile/checkout_right_order_total.tpl"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -275,6 +339,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"username",
 			".min.map",
 			" ",
 			"fontawesome",
@@ -401,8 +466,7 @@
 			".tab-pane",
 			"tab.pane",
 			"product-page",
-			"category-seo-tex",
-			"fashion"
+			"category-seo-tex"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -410,6 +474,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"name",
 			"",
 			"src=\"http://www.5rooms.com",
 			"furniture",
@@ -437,8 +502,183 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								992,
+								992
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "db/migrate/20140205145802_add_devise_to_users.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97,
+								97
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								100
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/layouts/application.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								583,
+								583
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/friendships_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1410,
+								1410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -480,7 +720,7 @@
 	"project": "bigbang.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -488,6 +728,42 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"",
+				"app/views/users/show.html.erb"
+			],
+			[
+				"use",
+				"app/models/user.rb"
+			],
+			[
+				"friend",
+				"app/models/friendship.rb"
+			],
+			[
+				"show",
+				"app/views/users/show.html.erb"
+			],
+			[
+				"inde",
+				"app/views/users/index.html.erb"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"devis",
+				"config/initializers/devise.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
 			[
 				"babyvar",
 				"catalog/view/theme/bootstrap/stylesheet/venture/baby-vars.less"
@@ -515,10 +791,6 @@
 			[
 				"categtpl",
 				"catalog/view/theme/bootstrap/template/product/category.tpl"
-			],
-			[
-				"",
-				"catalog/view/theme/bootstrap/libs/flexisel-master/css/style.css"
 			],
 			[
 				"babyless",
@@ -967,14 +1239,6 @@
 			[
 				"newsjs",
 				"catalog/view/theme/bootstrap/javascript/website/account/newsletter.js"
-			],
-			[
-				"config",
-				"config.php"
-			],
-			[
-				"con",
-				"config.php"
 			]
 		],
 		"width": 0.0
