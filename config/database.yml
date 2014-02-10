@@ -18,8 +18,17 @@ test:
   pool: 5
   timeout: 5000
 
+# production:
+#   adapter: mysql2
+#   database: db/production.sqlite3
+#   pool: 5
+#   timeout: 5000
+
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql2
+  encoding: utf8
+  database: rails
+  username: rails
+  password: Djp0kGvSP5
+  host: localhost
+  # port: 3306

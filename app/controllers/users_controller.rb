@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :check_admin, except: [:new, :create, :optin, :change_optin, :friendlist]
 
   # GET /users
   # GET /users.json
@@ -71,7 +72,8 @@ class UsersController < ApplicationController
   def change_optin
     if params[:optin] == 'true'
       current_user.update_attribute(:optin, true)
-      flash[:notice] = 'You successfully opted it!'
+      flash[:notice] = 'You successfully opted in!'
+      redirect_to root_path
     end
   end
     
