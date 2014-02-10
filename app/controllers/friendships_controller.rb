@@ -27,10 +27,10 @@ class FriendshipsController < ApplicationController
 def create
   @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
   if @friendship.save
-    flash[:notice] = "Added friend."
+    flash[:notice] = "Bang request sent!"
     redirect_to bangem_url
   else
-    flash[:error] = "Unable to add friend."
+    flash[:error] = "Unable to send Bang request"
     redirect_to bangem_url
   end
 end
@@ -38,7 +38,7 @@ end
 def destroy
   @friendship = current_user.friendships.find(params[:id])
   @friendship.destroy
-  flash[:notice] = "Removed friendship."
+  flash[:notice] = "Bang request removed!"
   redirect_to bangem_url
 end
 

@@ -1,9 +1,10 @@
 class TransactionMailer < ActionMailer::Base
   default from: 'bang-them-all@aiaccelerator.com'
  
-  def welcome_email(user)
+  def welcome(user, password)
+    @password = password
     @user = user
     @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+    mail(to: 'flacchio@gmail.com', subject: 'Welcome to My Awesome Site')
   end
 end
