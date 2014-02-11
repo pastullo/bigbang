@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :check_admin, except: [:new, :create, :optin, :change_optin, :friendlist]
+  before_action :check_admin, except: [:show, :new, :create, :optin, :change_optin, :friendlist]
+  before_action :check_owner, only: [:show]
 
   # GET /users
   # GET /users.json

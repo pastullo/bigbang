@@ -20,4 +20,10 @@ class ApplicationController < ActionController::Base
   	# flash[:notice] = 'You have to optin first'
   	redirect_to optin_path
   end
+  def check_owner
+    return if current_user.admin? 
+    return if params[:id].to_i == current_user.id  
+    flash[:alert] = 'You have to be logged to access this page'
+    redirect_to root_path 
+  end
 end
