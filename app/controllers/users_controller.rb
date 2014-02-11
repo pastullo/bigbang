@@ -74,8 +74,12 @@ class UsersController < ApplicationController
     if params[:optin] == 'true'
       current_user.update_attribute(:optin, true)
       flash[:notice] = 'You successfully opted in!'
+    else
+      current_user.update_attribute(:optin, false)
+      flash[:notice] = 'You opted out'
+    end      
+
       redirect_to root_path
-    end
   end
     
   private

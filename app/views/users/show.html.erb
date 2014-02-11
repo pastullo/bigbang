@@ -1,43 +1,49 @@
-
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %> 
-  <%= '<span class="label label-primary">Admin</span>'.html_safe if @user.admin?  %>
-  <%= '<span class="label label-info">SP</span>'.html_safe if @user.superpower?  %>
-</p> 
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-<%= image_tag @user.avatar.url(:medium) %>
-
-
 <div class="row">
-  <div class="col-sm-6">
-  <h4>Down to bang:</h4>
-  <ul>
-    <% for friendship in @user.friendships %>
-      <li>
-        <%=h friendship.friend.name %>
-        (<%= link_to "remove", friendship, :method => :delete %>)
-      </li>
-    <% end %>
-  </ul>
-  </div>
+  <div class="col-sm-4">
+    <p>
+      <strong>Name:</strong>
+      <%= @user.name %> 
+      <%= '<span class="label label-primary">Admin</span>'.html_safe if @user.admin?  %>
+      <%= '<span class="label label-info">SP</span>'.html_safe if @user.superpower?  %>
+    </p> 
 
-  <% if current_user.superpower? %>
-    <div class="col-sm-6">
-      <h4>Would be banged by:</h4>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+    <%= image_tag @user.avatar.url(:medium) %>
+
+    <%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-primary' %>
+    <%= link_to 'Edit', edit_user_path(@user) if current_user.admin? %>
+    
+    </div>
+
+
+    <div class="col-sm-4">
+      <h4>Down to bang:</h4>
       <ul>
-        <% for user in @user.inverse_friends %>
-          <li><%=h user.name %></li>
+        <% for friendship in @user.friendships %>
+          <li>
+            <%=h friendship.friend.name %>
+            (<%= link_to "remove", friendship, :method => :delete %>)
+          </li>
         <% end %>
       </ul>
-      </div>
-    <% end  %>
-</div>
+    </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <% if current_user.superpower? %>
+        <div class="col-sm-4">
+          <h4>Would be banged by:</h4>
+          <ul>
+            <% for user in @user.inverse_friends %>
+              <li><%=h user.name %></li>
+            <% end %>
+          </ul>
+          </div>
+        <% end  %>
+
+
+
+
+</div>
