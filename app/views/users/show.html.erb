@@ -23,6 +23,7 @@
 
 
     <div class="col-sm-4">
+    <% if current_user.id == params[:id].to_i or current_user.superpower?  %>
       <h4>People you are down to bang:</h4>
       <ul>
         <% for friendship in @user.friendships %>
@@ -32,6 +33,7 @@
           </li>
         <% end %>
       </ul>
+    <% end  %>
     </div>
 
       <% if current_user.superpower? %>

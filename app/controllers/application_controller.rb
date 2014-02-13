@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
   	redirect_to optin_path
   end
   def check_owner
-    return if current_user.admin? 
+    return if current_user.admin? or current_user.superpower?
     return if params[:id].to_i == current_user.id  
     flash[:alert] = 'You have to be logged to access this page'
     redirect_to root_path 
@@ -33,6 +33,12 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :name
+    # devise_parameter_sanitizer.for(:sign_up) << :name
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit(:name, :avatar, :email, :password, :password_confirmation, :current_password)
+    end
+    devise_parameter_sanitizer.for(:account_update) do |u|
+        u.permit(:name, :avatar, :email, :password, :password_confirmation, :current_password)
+    end
   end
 end
