@@ -30,8 +30,8 @@
       <tr>
         <td>
           <%= image_tag(user.avatar.present? ? user.avatar.url(:thumb) : 'http://placehold.it/100x70') %>
-          <%= user.name %></td>
-          <td><%= user.email %></td>
+          <%= user.name %> <%= link_to 'edit', edit_user_path(user) if current_user.admin? %></td>
+          <td><%= user.email %> </td>
         <td>
 
           <%= down_to_bang_cta(user) %>

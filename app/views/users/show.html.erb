@@ -61,7 +61,12 @@ they want to bang you:  <%= @banged.inspect %>
     <% else %>
       <p class="lead">Oh YES! WE HAVE A MATCH!!</p>
       <% @bangable_friends = User.where(:id => @matches) %>
-      <%= @bangable_friends.inspect %>
+      <% @bangable_friends.each do |match| %>
+        <ul>
+          <li><%= image_tag match.avatar.present? ? match.avatar.url(:thumb) : 'http://placehold.it/200x100' %> &nbsp;<%= match.name %></li>
+        </ul>
+      <% end  %>
+      <%# @bangable_friends.inspect %>
     <% end %>
   </div>
 </div>

@@ -21,7 +21,7 @@
         <td><%= user.email %></td>
 
         <td><% user.friends.each do |f| %>
-        <%= f.name.capitalize %><br> 
+        <%# f.name %> 
         <% end %></td>
         <td><%= user.optin.inspect %></td>
         <td>

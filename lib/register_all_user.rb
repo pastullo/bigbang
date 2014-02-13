@@ -1,9 +1,9 @@
 puts "ciao"
 
 users = [
-	{ :name => 'ab', :email => "email@email1.com" },
-	{ :name => 'ab', :email => "email@email2.com" },
-	{ :name => 'ab', :email => "email@email3.com" }
+	{ :name => 'Flavio Bezzeccheri', :email => "flacchio@gmail.com" },
+	{ :name => 'Tim', :email => "tim.lycett@aiaccelerator.com" },
+	{ :name => 'stephen', :email => "stephen.richards@5rooms.com" }
 ]
 
 # range for random password
@@ -15,9 +15,11 @@ users.each do |u|
 	password = Array.new(8){range.sample}.join
 	puts "#{u[:name]} - #{u[:email]} - #{password}"
 	user = User.new(:name => u[:name], :email => u[:email], :password => password, :password_confirmation => password)
-	user.save
-	puts "User #{user.id} created!"
-
+	if user.save
+		puts "User #{user.id} created!"
+	else 
+		puts "Error #{user.errors.full_messages}"
+	end
 	puts "Sending welcome email"
 	TransactionMailer.welcome(user, password).deliver
 	puts "Email sent"
