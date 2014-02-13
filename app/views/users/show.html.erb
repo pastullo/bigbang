@@ -28,7 +28,7 @@
       <ul>
         <% for friendship in @user.friendships %>
           <li>
-            <%=h friendship.friend.name %> (<%= friendship.friend.id %>)
+            <%=h friendship.friend.name %> 
             (<%= link_to "remove", friendship, :method => :delete %>)
           </li>
         <% end %>
@@ -41,7 +41,7 @@
           <h4>Would be banged by:</h4>
           <ul>
             <% for user in @user.inverse_friends %>
-              <li><%=h user.name %> (<%= user.id %>)</li>
+              <li><%=h user.name %> </li>
             <% end %>
           </ul>
           </div>
@@ -52,14 +52,11 @@
 <br><br>
 <div class="row text-center">
   <div class="col-xs-12">
-you want to bang:  <%= @bang.inspect %><br>
-they want to bang you:  <%= @banged.inspect %>
-<br>
-<%= @matches.inspect  %>
+
     <% unless @matches.length > 0  %>
-      <p class="lead">Uhhh, No bangs match so far!</p>
+      <p class="lead text-muted">Unlucky! no bangs so far :(</p>
     <% else %>
-      <p class="lead">Oh YES! WE HAVE A MATCH!!</p>
+      <p class="lead text-info">BOOM BANG! WE HAVE A MATCH!</p>
       <% @bangable_friends = User.where(:id => @matches) %>
       <% @bangable_friends.each do |match| %>
         <ul>

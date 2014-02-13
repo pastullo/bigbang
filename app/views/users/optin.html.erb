@@ -1,8 +1,8 @@
 <% if current_user.optin? %>
 <h4>And you’re in! Good on you.</h4>
 <p>But we need you to hold your horses for a little while longer…</p>
-
-<p>We’re launching with a big bang on Valentines Day!</p>
+<p>Only <%= User.where(:optin => true).count %> of your mates have already opted in, why don't you get the rest to jump on the bang wagon?</p>
+<p>We’re launching with a big bang on Valentines Day at 11AM!</p>
 <% else %>
 <p class="lead">Welcome to the BigBang app - the most banging app you’ll ever come across. </p>
 
