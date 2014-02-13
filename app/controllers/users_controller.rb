@@ -12,6 +12,18 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @bang = Array.new
+    @banged = Array.new
+    
+    @user.friendships.each do |f|
+      @bang.push(f.friend.id)
+    end
+
+    @user.inverse_friends.each do |f|
+      @banged.push(f.id)
+    end
+    @matches = (@bang & @banged)
+
   end
 
   def friendlist
