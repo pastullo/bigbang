@@ -1,7 +1,12 @@
+<p class="lead">Welcome to the BigBang app - the most banging app you’ll ever come across. </p>
 
-<h4>Hi <%= current_user.name %>!</h4>
-<p>To join TheBigBang you have to optin!</p>
-<p><%= User.where(:optin => true).count %> friends have already opted in</p>
+
+<p class="lead">Now that you’re signed up, here’s why you’ll want to stay. No prospective bang will ever know you’ve sent them a bang request unless the vibe is mutual.</p>
+
+
+<p class="lead">To join in on all the action, you’ll need to opt in. <%= User.where(:optin => true).count %> of your mates have already opted in – don’t leave them hanging.</p>
+
+
 
 <%= button_to 'Yes, I want to optin!', change_optin_user_path(current_user, :optin => true), class: 'btn btn-success' %>
 <%# button_to 'Opt Out', change_optin_path(:optin => false) %>
