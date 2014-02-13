@@ -1,27 +1,25 @@
 <div class="row">
   <div class="col-sm-4">
+    <h3><%= @user.name %></h3>
     <p>
-      <strong>Name:</strong>
-      <%= @user.name %> 
       <%= '<span class="label label-primary">Admin</span>'.html_safe if @user.admin?  %>
       <%= '<span class="label label-info">SP</span>'.html_safe if @user.superpower?  %>
     </p> 
 
 
     <p>
-      <strong>Email:</strong>
-      <%= @user.email %>
+      <strong><%= @user.email %></strong>
     </p>
-    <%= image_tag @user.avatar.url(:medium) %>
+    <%= image_tag @user.avatar.url(:medium) %><br>
 
-    <%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-primary' %>
+    <%= link_to 'Edit your Profile', edit_user_registration_path, class: 'btn btn-primary' %><br>
     <%= link_to 'Edit', edit_user_path(@user) if current_user.admin? %>
     
     </div>
 
 
     <div class="col-sm-4">
-      <h4>Down to bang:</h4>
+      <h4>You are down to bang:</h4>
       <ul>
         <% for friendship in @user.friendships %>
           <li>
