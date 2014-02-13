@@ -9,9 +9,7 @@
         <p>Don’t get too excited though – you can only put up to 15 mates as down to bang. And even if you change your mind and unbang someone, it’ll still count. So use your bangs sparingly.</p>
       </div>
 
-
-
-<p>Check out who’s opted in below and see if you can spot any potentials. <%= User.where(:optin => true).count %> people have opted in so far.</p>
+<p>Check out who’s opted in below and see if you can spot any potentials. <%= User.where(:optin => true).count %> people have opted in so far. You have <%= current_user.bangsleft %> bangs left!</p>
   </div>
 </div>
 

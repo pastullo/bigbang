@@ -25,12 +25,18 @@ class FriendshipsController < ApplicationController
   # POST /friendships.json
 
 def create
+  if current_user.bangsleft < 1
+    flash[:alert] = 'You do not have any bangs left'
+    redirect_to root_url and return
+  end
+
   @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
   if @friendship.save
+    current_user.update_attribute(:bangsleft, current_user.bangsleft - 1)
     flash[:notice] = "Bang request sent!"
     redirect_to bangem_url
   else
-    flash[:error] = "Unable to send Bang request"
+    flash[:alert] = "Unable to send Bang request"
     redirect_to bangem_url
   end
 end

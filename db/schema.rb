@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210134357) do
+ActiveRecord::Schema.define(version: 20140213143119) do
 
   create_table "friendships", force: true do |t|
     t.integer  "user_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140210134357) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.boolean  "superpower"
+    t.integer  "bangsleft",              default: 15
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
