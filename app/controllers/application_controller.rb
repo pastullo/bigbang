@@ -17,8 +17,9 @@ class ApplicationController < ActionController::Base
   def check_optin
   	return unless user_signed_in?
 
-  	return if current_user.optin
-  	
+  	# return if current_user.optin
+  	return if current_user.admin? or Time.now > Time.local(2014, 2, 14, 9, 00)
+
     return if (controller_name == 'users' and (action_name == 'optin' or action_name == 'change_optin')) or (action_name == 'destroy' and controller_name == 'sessions')
   	# flash[:notice] = 'You have to optin first'
   	redirect_to optin_path

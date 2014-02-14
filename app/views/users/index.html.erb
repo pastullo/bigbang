@@ -17,7 +17,9 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
+        <td>
+        <%= image_tag(user.avatar.present? ? user.avatar.url(:thumb) : 'http://placehold.it/100x70') %>
+        <%= user.name %></td>
         <td><%= user.email %></td>
 
         <td><% user.friends.each do |f| %>

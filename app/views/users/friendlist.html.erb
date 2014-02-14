@@ -1,15 +1,26 @@
 <div class="row">
   <div class="col-xs-12">
     <h2>It’s the moment of truth. Who do you wanna bang?</h2>
-
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-9">
       <div class="alert alert-success">
         <h4>We’ve got your back – your privacy is completely safe.</h4>
         <p>Unless your bang is also interested, he or she will never know what you’re hoping for. And of course, we’ve encrypted all our data so only you have access to your bangs and if you’re not accessing them, no one is.</p>
 
         <p>Don’t get too excited though – you can only put up to 15 mates as down to bang. And even if you change your mind and unbang someone, it’ll still count. So use your bangs sparingly.</p>
       </div>
-
-<p>Check out who’s opted in below and see if you can spot any potentials. <%= User.where(:optin => true).count %> people have opted in so far. You have <%= current_user.bangsleft %> bangs left!</p>
+    </div>
+    <div class="col-sm-3 text-right">
+      <h4>The bang stats:</h4>
+      <p>You have <b><%= current_user.bangsleft %></b> bangs left!</p>
+      <p><%= User.where(:optin => true).count %> people opted-in out of <%= User.count %></p>
+      <p><%= Friendship.count %> bangs requests sent so far</p>
+    </div>
+    <div class="col-xs-12">
+      <p>Check out who’s opted in below and see if you can spot any potentials.</p>
+    </div>
   </div>
 </div>
 
